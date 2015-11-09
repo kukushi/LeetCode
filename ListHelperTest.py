@@ -4,24 +4,22 @@ import sys
 scriptpath = "./ListHelper.py"
 sys.path.append(os.path.abspath(scriptpath))
 
-
-import ListHelper
+from ListHelper import ListHelper
+from ListHelper import ListNode
 import unittest
 
 class TestAddNumbersMethod(unittest.TestCase):
 
     def test_singleItemArray(self):
-        node = ListHelper.ListNode(1)
-        list_helper = ListHelper.ListHelper()
-        transfered_list = list_helper.ListNodeFromList([1])
+        node = ListNode(1)
+        transfered_list = ListHelper.listNodeFromList([1])
         self.assertEqual(transfered_list, node)
         return
 
     def test_multipleItemArray(self):
-        list_helper = ListHelper.ListHelper()
-        node = ListHelper.ListNode(1)
-        node.next = ListHelper.ListNode(2)
-        transfered_list = list_helper.ListNodeFromList([1, 2])
+        node = ListNode(1)
+        node.next = ListNode(2)
+        transfered_list = ListHelper.listNodeFromList([1, 2])
         self.assertEqual(transfered_list, node)
         return
 
