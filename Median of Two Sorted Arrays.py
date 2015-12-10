@@ -45,12 +45,3 @@ class Solution(object):
         	return float(pre + nums[it]) / 2
         else:
         	return float(nums[(len4 - len3) // 2 - 1] + nums[(len4 - len3) // 2]) / 2
-
-print(Solution().findMedianSortedArrays([1, 2], [3, 4]))
-print(Solution().findMedianSortedArrays([1, 2], [3, 4, 5, 6]))
-print(Solution().findMedianSortedArrays([0], [1, 2, 3, 4]))
-print(Solution().findMedianSortedArrays([0, 1], [1, 2, 3, 4]))
-print(Solution().findMedianSortedArrays([0, 1], [1, 2, 3, 4, 9, 9, 9, 9, 9, 9, 9]))
-print(Solution().findMedianSortedArrays([], [1, 2, 4]))
-print(Solution().findMedianSortedArrays([3, 4], []))
-print(Solution().findMedianSortedArrays([], [2, 3]))
